@@ -18,8 +18,8 @@ body, .clock{
 .clock{
     border: 15px solid white;
     border-radius: 100%;
-    width: 25vw;
-    height: 50vh
+    width: 300px;
+    height: 300px
 }
 .clock-face{
     border-radius: 100%;
@@ -30,7 +30,13 @@ body, .clock{
     background-color: black;
     position: absolute; 
     top: 50%;
-    left: 50%;
+    right: 50%;
+    /* ANIMATION BEGIN*/
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transition: all 0.05s;
+    /* ANIMATION END */
 }
 .hour-hand{
     width: 25%;
