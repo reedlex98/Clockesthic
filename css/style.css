@@ -1,0 +1,48 @@
+/* Project layout */
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: blue;
+}
+body, .clock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* end of layout section */
+
+/* Clock style section */
+
+.clock{
+    border: 15px solid white;
+    border-radius: 100%;
+    width: 25vw;
+    height: 50vh
+}
+.clock-face{
+    border-radius: 100%;
+    height: 95%; width: 95%;
+    position: relative;
+}
+.hand{
+    background-color: black;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+}
+.hour-hand{
+    width: 25%;
+    height: 5px;
+}
+.min-hand,.second-hand{
+    width: 45%;
+}
+.min-hand{
+    height: 3px;
+}
+.second-hand{
+    height: 1px;
+}
+/* end of clock section */
