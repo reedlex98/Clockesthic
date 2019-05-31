@@ -1,9 +1,20 @@
+/* General variables definition */
+:root{
+    --light-pink: #fcf9ec;
+    --pink: #fec8d8;
+    --dark-pink: #d291bc;
+    --darkest-pink: #957dad;
+    --green: #c6cf65;
+    --heart: #ff4949
+}
+/* end of variables section */
+
 /* Project layout */
 body{
     padding: 0;
     margin: 0;
     height: 100vh;
-    background-color: blue;
+    background-color: var(--light-pink);
 }
 body, .clock{
     display: flex;
@@ -16,18 +27,23 @@ body, .clock{
 /* Clock style section */
 
 .clock{
-    border: 15px solid white;
+    border: 15px solid var(--darkest-pink);
     border-radius: 100%;
     width: 300px;
-    height: 300px
+    height: 300px;
+    box-shadow: 0 0 25px 5px var(--dark-pink);
+    transition: all 1s;
+}
+.clock:hover{
+    box-shadow: 0 0 100px 5px var(--darkest-pink);
 }
 .clock-face{
     border-radius: 100%;
     height: 95%; width: 95%;
     position: relative;
+    background-color: white;
 }
 .hand{
-    background-color: black;
     position: absolute; 
     top: 50%;
     right: 50%;
@@ -39,11 +55,14 @@ body, .clock{
     /* ANIMATION END */
 }
 .hour-hand{
+    background-color: var(--darkest-pink);
     width: 25%;
     height: 5px;
 }
 .min-hand,.second-hand{
+    background-color: var(--dark-pink);
     width: 45%;
+
 }
 .min-hand{
     height: 3px;
@@ -52,3 +71,22 @@ body, .clock{
     height: 1px;
 }
 /* end of clock section */
+
+/* reedlex98 mark section */
+
+body small{
+    position: absolute;
+    bottom: 0; right: 0;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.75);
+    color: var(--light-pink);
+    border-top-left-radius: 10px
+}
+small span{
+    color: var(--green)
+}
+small i{
+    color: var(--heart)
+}
+
+/* end of reedlex98 section */

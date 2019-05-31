@@ -22,3 +22,4 @@ function clockInit(now,secondHand,minuteHand,hourHand) {
 clockInit(new Date(), secondHand, minuteHand, hourHand)
 setInterval( ()=>clockInit(new Date(), secondHand, minuteHand, hourHand), 1000)
 // End of clock section
+
